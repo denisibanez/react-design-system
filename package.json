@@ -1,7 +1,7 @@
 {
-  "name": "react-ds",
-  "private": true,
-  "version": "0.0.0",
+  "name": "@denisibanez/react-ds",
+  "private": false,
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -70,6 +70,14 @@
   },
   "peerDependencies": {
     "react": "^18.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/denisibanez/react-design-system/tree/feature/mui"
+  },
+  "publishConfig": {
+    "access": "public",
+    "@denisibanez/react-ds:registry": "https://npm.pkg.github.com"
   },
   "husky": {
     "hooks": {
