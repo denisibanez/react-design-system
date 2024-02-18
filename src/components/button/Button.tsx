@@ -1,3 +1,4 @@
+import Button from '@mui/material/Button';
 import React, { ReactNode } from 'react';
 import './Button.scss';
 
@@ -8,9 +9,9 @@ interface ButtonProps {
 
 const ButtonComponent: React.FC<ButtonProps> = ({ onClick, children }) => {
   return (
-    <button id="Button" className="button" onClick={onClick}>
+    <Button variant="contained" color="success" className="button" onClick={onClick}>
       {children}
-    </button>
+    </Button>
   );
 };
 export default ButtonComponent;
