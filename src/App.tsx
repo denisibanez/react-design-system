@@ -20,7 +20,9 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import './App.css';
 
-function Copyright(props: undefined) {
+interface Props {
+}
+function Copyright(props: Props) {
   return (
     <Typography
       variant="body2"
@@ -146,7 +148,7 @@ const App: React.FC = () => {
                 </Grid>
               </Box>
             </Box>
-            <Copyright sx={{ mt: 5 }} />
+            <Copyright  />
           </Container>
         </ThemeProvider>
 

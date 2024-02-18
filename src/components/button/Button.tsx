@@ -9,7 +9,12 @@ interface ButtonProps {
 
 const ButtonComponent: React.FC<ButtonProps> = ({ onClick, children }) => {
   return (
-    <Button variant="contained" color="success" className="button" onClick={onClick}>
+    <Button
+      variant="contained"
+      color="success"
+      className="button"
+      onClick={onClick}
+    >
       {children}
     </Button>
   );
