@@ -5,6 +5,6 @@ test('renders learn react link', () => {
   render(
     <HeaderComponent menuItems={[]} appName={'app'} buttonLabel={'label'} />
   );
-  const linkElement = screen.getAllByText('count');
+  const linkElement = screen.getByTestId('header-ds');
   expect(linkElement).toBeTruthy();
 });

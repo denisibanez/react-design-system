@@ -6,7 +6,7 @@ import './Loader.scss';
 
 const LoaderComponent: React.FC = () => {
   return (
-    <Box sx={{ display: 'flex' }}>
+    <Box sx={{ display: 'flex' }} data-testid="loading">
       <CircularProgress />
     </Box>
   );

@@ -1,0 +1,31 @@
+body.body--light .dashboard-theme {
+  --q-primary: #41b871;
+  --q-secondary: #eaecec;
+  --q-accent: #41b871;
+  --q-positive: #41b871;
+  --q-negative: #ef4444;
+  --q-info: #3b82f6;
+  --q-warning: #3b82f6;
+}
+
+body.body--light,
+body.body--dark {
+  background-color: #f4f5f5;
+}
+
+body.body--dark .dashboard-theme {
+  --q-secondary: #373739;
+  --q-dark: #0c0c0d;
+  --q-dark-page: #0c0c0d;
+  --q-primary: #41b871;
+  --q-accent: #41b871;
+  --q-positive: #41b871;
+  --q-negative: #ef4444;
+  --q-info: #3b82f6;
+  --q-warning: #3b82f6;
+}
+
+body.body--dark,
+body.body--dark .q-page {
+  background-color: #0c0c0d;
+}

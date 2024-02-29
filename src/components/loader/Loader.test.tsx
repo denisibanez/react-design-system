@@ -3,6 +3,6 @@ import LoaderComponent from './Loader';
 
 test('renders learn react link', () => {
   render(<LoaderComponent />);
-  const linkElement = screen.getAllByText('count');
+  const linkElement = screen.getByTestId('loading');
   expect(linkElement).toBeTruthy();
 });

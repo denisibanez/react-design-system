@@ -31,7 +31,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({
   };
 
   const DrawerList = (
-    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
+    <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)} >
       <List>
         {menuItems.map((text, index) => (
           <ListItem key={text} disablePadding>
@@ -49,7 +49,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} data-testid="header-ds">
       <AppBar position="static">
         <Toolbar className="header__toolbar">
           <IconButton
