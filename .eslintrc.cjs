@@ -4,13 +4,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:react-hooks/recommended',
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-  ],
+  extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react-hooks/recommended', 'plugin:react/recommended', 'plugin:prettier/recommended', 'plugin:storybook/recommended'],
   ignorePatterns: ['dist', '.eslintrc.cjs', '*.test.tsx'],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh',"react", "react-hooks", "@typescript-eslint"],
@@ -23,7 +17,8 @@ module.exports = {
     'react/jsx-no-target-blank': 'off',
     'react/no-direct-mutation-state': 'off',
     'react/prop-types': 'off',
-    'react/require-render-return': 'off'
+    'react/require-render-return': 'off',
+    "react/react-in-jsx-scope": "off",
   },
   settings: {
     react: {

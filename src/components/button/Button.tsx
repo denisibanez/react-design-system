@@ -1,16 +1,23 @@
-import React, { ReactNode } from 'react';
+import Button from '@mui/material/Button';
+import React from 'react';
 import './Button.scss';
+import { ButtonProps } from './Button.model';
 
-interface ButtonProps {
-  onClick: () => void;
-  children: ReactNode;
-}
-
-const ButtonComponent: React.FC<ButtonProps> = ({ onClick, children }) => {
+const ButtonComponent: React.FC<ButtonProps> = ({
+  onClick,
+  children,
+  variant = 'contained',
+  color = 'success',
+}) => {
   return (
-    <button className="button" onClick={onClick}>
+    <Button
+      variant={variant}
+      color={color}
+      className="button"
+      onClick={onClick}
+    >
       {children}
-    </button>
+    </Button>
   );
 };
 export default ButtonComponent;

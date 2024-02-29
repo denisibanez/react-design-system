@@ -1,8 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import ButtonComponent from './Button';
+import SnackbarComponent from './Snackbar';
 
 test('renders learn react link', () => {
-  render(<ButtonComponent onClick={() => {}} children={'count'} />);
+  render(
+    <SnackbarComponent model={false} closeSnackbar={() => {}} message={''} />
+  );
   const linkElement = screen.getAllByText('count');
   expect(linkElement).toBeTruthy();
 });

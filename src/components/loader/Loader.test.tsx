@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
-import ButtonComponent from './Button';
+import LoaderComponent from './Loader';
 
 test('renders learn react link', () => {
-  render(<ButtonComponent onClick={() => {}} children={'count'} />);
+  render(<LoaderComponent />);
   const linkElement = screen.getAllByText('count');
   expect(linkElement).toBeTruthy();
 });
