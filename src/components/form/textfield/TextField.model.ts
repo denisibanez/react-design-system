@@ -5,7 +5,7 @@ interface CustomHelperTextInterface {
 
 interface InputInterface {
   error: boolean;
-  handleFn: (value: undefined) => void;
+  handleFn: (value: string | undefined) => void;
   model: string;
   label: string;
   customMessage?: string;
