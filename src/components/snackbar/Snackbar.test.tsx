@@ -3,8 +3,8 @@ import SnackbarComponent from './Snackbar';
 
 test('renders learn react link', () => {
   render(
-    <SnackbarComponent model={false} closeSnackbar={() => {}} message={''} />
+    <SnackbarComponent model={true} closeSnackbar={() => {}} message={''} />
   );
-  const linkElement = screen.getAllByText('count');
+  const linkElement = screen.getByTestId('snackbar-ds');
   expect(linkElement).toBeTruthy();
 });

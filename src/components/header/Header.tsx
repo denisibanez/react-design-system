@@ -23,6 +23,8 @@ const HeaderComponent: React.FC<HeaderProps> = ({
   menuItems,
   appName,
   buttonLabel,
+  navigateFn,
+  buttonFn,
 }) => {
   const [open, setOpen] = React.useState(false);
 
@@ -34,7 +36,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {menuItems.map((text, index) => (
-          <ListItem key={text} disablePadding>
+          <ListItem key={text} disablePadding onClick={navigateFn}>
             <ListItemButton>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
@@ -49,7 +51,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} data-testid="header-ds">
       <AppBar position="static">
         <Toolbar className="header__toolbar">
           <IconButton
@@ -67,7 +69,9 @@ const HeaderComponent: React.FC<HeaderProps> = ({
             {appName}
           </Typography>
 
-          <Button color="inherit">{buttonLabel}</Button>
+          <Button color="inherit" onClick={buttonFn}>
+            {buttonLabel}
+          </Button>
         </Toolbar>
       </AppBar>
 

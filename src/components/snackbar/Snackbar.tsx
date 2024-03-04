@@ -15,7 +15,7 @@ const SnackbarComponent: FC<SnackbarInterfaceProps> = ({
   message,
 }): JSX.Element => {
   const handleClose = () => {
-    closeSnackbar();
+    closeSnackbar;
   };
 
   return (
@@ -26,6 +26,7 @@ const SnackbarComponent: FC<SnackbarInterfaceProps> = ({
             open={true}
             autoHideDuration={duration}
             onClose={handleClose}
+            data-testid="snackbar-ds"
           >
             <Alert
               onClose={handleClose}
