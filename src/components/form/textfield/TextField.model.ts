@@ -9,6 +9,7 @@ interface InputInterface {
   model: string;
   label: string;
   customMessage?: string;
+  required?: boolean;
 }
 
 export type { InputInterface, CustomHelperTextInterface };

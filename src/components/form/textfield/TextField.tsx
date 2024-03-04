@@ -41,9 +41,10 @@ const TextFieldComponent: React.FC<InputInterface> = ({
   model,
   label,
   customMessage,
+  required
 }) => {
   return (
-    <FormControl error={error} required>
+    <FormControl error={error} required={required}>
       <InputLabel htmlFor="component-outlined">{label}</InputLabel>
       <OutlinedInput onChange={({ target: { value } }) => handleFn(value)} />
       <CustomHelperText value={model} customMessage={customMessage} />
