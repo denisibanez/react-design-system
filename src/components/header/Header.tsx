@@ -36,7 +36,7 @@ const HeaderComponent: React.FC<HeaderProps> = ({
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <List>
         {menuItems.map((text, index) => (
-          <ListItem key={text} disablePadding onClick={navigateFn}>
+          <ListItem key={text} disablePadding onClick={() => navigateFn(text)}>
             <ListItemButton>
               <ListItemIcon>
                 {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
