@@ -2,6 +2,6 @@ export interface HeaderProps {
   menuItems: string[];
   appName: string;
   buttonLabel: string;
-  navigateFn?: () => void;
-  buttonFn?: () => void;
+  navigateFn: (value: string) => void | undefined;
+  buttonFn?: () => void | undefined;
 }
