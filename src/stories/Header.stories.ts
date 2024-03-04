@@ -25,5 +25,7 @@ export const Default: Story = {
     menuItems: ['Inbox', 'Starred', 'Send email', 'Drafts'],
     appName: 'App name',
     buttonLabel: 'Login',
+    navigateFn: () => console.log('navigate'),
+    buttonFn: () => console.log('Button'),
   },
 };

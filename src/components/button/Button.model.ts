@@ -3,6 +3,8 @@ import { ReactNode } from 'react';
 export interface ButtonProps {
   onClick: () => void;
   variant?: 'text' | 'contained' | 'outlined' | undefined;
+  loading?: boolean;
+  disabled?: boolean;
   color?:
     | 'success'
     | 'inherit'
