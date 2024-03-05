@@ -6,6 +6,7 @@ test('renders learn react link', () => {
     <TextFieldComponent
       handleFn={(value: any): void => console.log(value)}
       label={'input'}
+      error={undefined}
     />
   );
   const linkElement = screen.getAllByText('input');

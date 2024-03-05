@@ -47,6 +47,7 @@ export const Default: Story = {
     variant: 'contained',
     loading: false,
     disabled: false,
+    type: 'button',
     onClick: () => console.log('Button'),
   },
 };

@@ -11,10 +11,20 @@ import { InputInterface } from './TextField.model';
 const TextFieldComponent: React.FC<InputInterface> = ({
   handleFn,
   label,
+  type = 'text',
+  placeholder,
+  error,
 }) => {
   return (
     <>
-      <TextField  label={label} variant="outlined" onChange={({ target: { value } }) => handleFn(value)} />
+      <TextField
+        type={type}
+        label={label}
+        variant="outlined"
+        placeholder={placeholder}
+        error={error}
+        onChange={({ target: { value } }) => handleFn(value)}
+      />
     </>
   );
 };

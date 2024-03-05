@@ -11,6 +11,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
   variant = 'contained',
   color = 'success',
   disabled = false,
+  type = 'button',
 }) => {
   return (
     <Button
@@ -19,6 +20,7 @@ const ButtonComponent: React.FC<ButtonProps> = ({
       className="button"
       disabled={disabled}
       onClick={onClick}
+      type={type}
     >
       {loading ? <CircularProgress color="inherit" size="25px" /> : children}
     </Button>
