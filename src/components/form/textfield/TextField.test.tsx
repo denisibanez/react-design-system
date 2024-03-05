@@ -4,9 +4,7 @@ import TextFieldComponent from './TextField';
 test('renders learn react link', () => {
   render(
     <TextFieldComponent
-      error={false}
       handleFn={(value: any): void => console.log(value)}
-      model={''}
       label={'input'}
     />
   );
