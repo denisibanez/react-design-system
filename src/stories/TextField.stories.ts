@@ -26,7 +26,5 @@ export const Default: Story = {
   args: {
     handleFn: (value) => console.log(value),
     label: 'Label',
-    error: true,
-    model: '',
   },
 };
