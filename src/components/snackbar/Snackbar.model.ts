@@ -1,9 +1,7 @@
-import { Dispatch, SetStateAction } from 'react';
-
 export interface SnackbarInterfaceProps {
   model: boolean;
   duration?: number;
-  closeSnackbar: Dispatch<SetStateAction<boolean>>;
+  closeSnackbar: () => void;
   severity?: 'error' | 'info' | 'success' | 'warning';
   message: string;
 }

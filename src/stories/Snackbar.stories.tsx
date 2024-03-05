@@ -25,10 +25,14 @@ export default {
 
 export const Default: Story = (args: SnackbarInterfaceProps) => {
   const [model, setModel] = useState(true);
-  return <SnackbarComponent {...args} model={model} closeSnackbar={setModel} />;
+  const closeSnackbar = () => {
+    setModel(false);
+  };
+  return (
+    <SnackbarComponent {...args} model={model} closeSnackbar={closeSnackbar} />
+  );
 };
 Default.args = {
-  model: false,
   message: 'This is a success Alert inside a Snackbar!',
   duration: 6000,
   severity: 'success',

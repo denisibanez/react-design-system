@@ -15,7 +15,7 @@ const SnackbarComponent: FC<SnackbarInterfaceProps> = ({
   message,
 }): JSX.Element => {
   const handleClose = () => {
-    closeSnackbar;
+    closeSnackbar();
   };
 
   return (
