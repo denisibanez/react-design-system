@@ -3,7 +3,7 @@ import React from 'react';
 import './TextField.scss';
 
 // Material componentes
-import { TextField } from '@mui/material';
+import { FormHelperText, TextField } from '@mui/material';
 
 // Types
 import { InputInterface } from './TextField.model';
@@ -13,6 +13,7 @@ const TextFieldComponent: React.FC<InputInterface> = ({
   label,
   type = 'text',
   placeholder,
+  errorMessage,
   error,
 }) => {
   return (
@@ -23,8 +24,12 @@ const TextFieldComponent: React.FC<InputInterface> = ({
         variant="outlined"
         placeholder={placeholder}
         error={error}
-        onChange={({ target: { value } }) => handleFn(value)}
+        onChange={({ target: { value } }) =>
+          handleFn ? handleFn(value) : null
+        }
       />
+
+      <FormHelperText error={true}>{errorMessage}</FormHelperText>
     </>
   );
 };
