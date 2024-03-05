@@ -26,5 +26,8 @@ export const Default: Story = {
   args: {
     handleFn: (value) => console.log(value),
     label: 'Label',
+    type: 'text',
+    placeholder: 'placeholder',
+    error: false,
   },
 };

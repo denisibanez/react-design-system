@@ -15,4 +15,5 @@ export interface ButtonProps {
     | 'warning'
     | undefined;
   children: ReactNode;
+  type?: 'button' | 'submit';
 }
