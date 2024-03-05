@@ -5,7 +5,7 @@ interface InputInterface {
   label: string;
   type?: HTMLInputTypeAttribute;
   placeholder?: string;
-  error: boolean | unknown;
+  error: boolean | undefined;
 }
 
 export type { InputInterface };
